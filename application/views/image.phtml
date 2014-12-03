@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    
+  </head>
+  
+  <body>
+
+    <p>
+      <form action="image.php" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file"/>
+            <input type="submit" name="submit"/>
+     </form>
+    </p>
+
+  <?php foreach ($files1 as $value):?>
+
+    <img src="pictures/<?php echo $value?>" alt="picture" width="150"></img><br>
+
+  <?php endforeach ?>
+
+
+  </body>
+</html>
+

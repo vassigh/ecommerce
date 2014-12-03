@@ -1,0 +1,49 @@
+
+/* -------------------------------------------- */
+/*        CSS  -- TP Formulaires Réservation	*/
+/* -------------------------------------------- */
+
+/* ------------------  */
+/* Style des couleurs  */
+/* ------------------  */
+
+
+h1{
+	text-align: center;
+}
+
+.teste {
+    display: -webkit-flex;
+    display: Flex;
+    padding: 0;
+    align-items:stretch;
+}
+
+.article1{
+	width: 32%;
+	text-align: justify;
+	margin-right: 2%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+	padding: 5px;
+}
+
+.article2{
+	width: 32%;
+	text-align: justify;
+	margin-right: 2%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+	padding: 5px;
+}
+
+.article3{
+	width: 32%;
+	text-align: justify;
+	border-style: solid;
+	border-width: 2px;
+	border-color: red;
+	padding: 5px;
+}
