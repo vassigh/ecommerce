@@ -24,9 +24,21 @@ class Model_Admin
         return $id;
     }
 
-    public function updatePost($id, $titre, $contenu, $categorie)
+    public function updateProduit_image($id, $nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image)
     {
-        $id=$this->db->execute("update news SET titre=?, contenu=?, categorie=?, dateModif=CURRENT_TIMESTAMP where id = $id", array("$titre", "$contenu","$categorie" ));
+        $id=$this->db->execute("update produits SET nom=?, auteur=?, editeur=?, categorie=?, date_edition=?, prix=?, image=? where id = ?", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image, $id));
+        return $id;
+    }
+
+    public function updateProduit($id, $nom, $auteur, $editeur, $categorie, $date_edition, $prix)
+    {
+        $id=$this->db->execute("update produits SET nom=?, auteur=?, editeur=?, categorie=?, date_edition=?, prix=? where id = ?", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $id));
+        return $id;
+    }
+
+    public function getProduit($id)
+    {
+        $id=$this->db->queryOne("select * from produits where id = ?", array($id));
         return $id;
     }
 

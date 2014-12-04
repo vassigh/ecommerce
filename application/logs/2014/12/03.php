@@ -387,3 +387,205 @@
 2014-12-03 09:30:56 --- EMERGENCY: ErrorException [ 4 ]: syntax error, unexpected '?>' ~ APPPATH/views/ad_suppression.php [ 15 ] in file:line
 2014-12-03 09:30:56 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
 #1 {main} in file:line
+2014-12-03 10:34:01 --- EMERGENCY: View_Exception [ 0 ]: The requested view ad_modification could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:34:01 --- DEBUG: #0 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(137): Kohana_View->set_filename('ad_modification')
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(30): Kohana_View->__construct('ad_modification', NULL)
+#2 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(45): Kohana_View::factory('ad_modification')
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:36:03 --- EMERGENCY: View_Exception [ 0 ]: The requested view ad_modification could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:36:03 --- DEBUG: #0 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(137): Kohana_View->set_filename('ad_modification')
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(30): Kohana_View->__construct('ad_modification', NULL)
+#2 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(45): Kohana_View::factory('ad_modification')
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:37:21 --- EMERGENCY: View_Exception [ 0 ]: The requested view ad_modification could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:37:21 --- DEBUG: #0 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(137): Kohana_View->set_filename('ad_modification')
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(30): Kohana_View->__construct('ad_modification', NULL)
+#2 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(45): Kohana_View::factory('ad_modification')
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:38:55 --- EMERGENCY: View_Exception [ 0 ]: The requested view ad_modification could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:38:55 --- DEBUG: #0 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(137): Kohana_View->set_filename('ad_modification')
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(30): Kohana_View->__construct('ad_modification', NULL)
+#2 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(45): Kohana_View::factory('ad_modification')
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:39:00 --- EMERGENCY: View_Exception [ 0 ]: The requested view ad_modification could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:39:00 --- DEBUG: #0 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(137): Kohana_View->set_filename('ad_modification')
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(30): Kohana_View->__construct('ad_modification', NULL)
+#2 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(45): Kohana_View::factory('ad_modification')
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:40:49 --- EMERGENCY: View_Exception [ 0 ]: The requested view ad_modification could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:40:49 --- DEBUG: #0 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(137): Kohana_View->set_filename('ad_modification')
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(30): Kohana_View->__construct('ad_modification', NULL)
+#2 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(45): Kohana_View::factory('ad_modification')
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:40:52 --- EMERGENCY: View_Exception [ 0 ]: The requested view ad_modification could not be found ~ SYSPATH/classes/Kohana/View.php [ 257 ] in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 10:40:52 --- DEBUG: #0 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(137): Kohana_View->set_filename('ad_modification')
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(30): Kohana_View->__construct('ad_modification', NULL)
+#2 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(45): Kohana_View::factory('ad_modification')
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#4 [internal function]: Kohana_Controller->execute()
+#5 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#7 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#8 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#9 {main} in /home/wap22/sites/ecommerce/system/classes/Kohana/View.php:137
+2014-12-03 11:00:31 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: contenu ~ APPPATH/views/ad_modification.php [ 20 ] in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:00:31 --- DEBUG: #0 /home/wap22/sites/ecommerce/application/views/ad_modification.php(20): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/wap22/sit...', 20, Array)
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(61): include('/home/wap22/sit...')
+#2 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(348): Kohana_View::capture('/home/wap22/sit...', Array)
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(228): Kohana_View->render()
+#4 /home/wap22/sites/ecommerce/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#5 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(75): Kohana_Response->body(Object(View))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#9 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#12 {main} in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:00:47 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: contenu ~ APPPATH/views/ad_modification.php [ 20 ] in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:00:47 --- DEBUG: #0 /home/wap22/sites/ecommerce/application/views/ad_modification.php(20): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/wap22/sit...', 20, Array)
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(61): include('/home/wap22/sit...')
+#2 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(348): Kohana_View::capture('/home/wap22/sit...', Array)
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(228): Kohana_View->render()
+#4 /home/wap22/sites/ecommerce/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#5 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(75): Kohana_Response->body(Object(View))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#9 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#12 {main} in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:01:37 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: contenu ~ APPPATH/views/ad_modification.php [ 20 ] in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:01:37 --- DEBUG: #0 /home/wap22/sites/ecommerce/application/views/ad_modification.php(20): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/wap22/sit...', 20, Array)
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(61): include('/home/wap22/sit...')
+#2 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(348): Kohana_View::capture('/home/wap22/sit...', Array)
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(228): Kohana_View->render()
+#4 /home/wap22/sites/ecommerce/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#5 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(75): Kohana_Response->body(Object(View))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#9 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#12 {main} in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:01:42 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: contenu ~ APPPATH/views/ad_modification.php [ 20 ] in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:01:42 --- DEBUG: #0 /home/wap22/sites/ecommerce/application/views/ad_modification.php(20): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/wap22/sit...', 20, Array)
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(61): include('/home/wap22/sit...')
+#2 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(348): Kohana_View::capture('/home/wap22/sit...', Array)
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(228): Kohana_View->render()
+#4 /home/wap22/sites/ecommerce/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#5 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(75): Kohana_Response->body(Object(View))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#9 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#12 {main} in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:02:37 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: contenu ~ APPPATH/views/ad_modification.php [ 20 ] in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:02:37 --- DEBUG: #0 /home/wap22/sites/ecommerce/application/views/ad_modification.php(20): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/wap22/sit...', 20, Array)
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(61): include('/home/wap22/sit...')
+#2 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(348): Kohana_View::capture('/home/wap22/sit...', Array)
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(228): Kohana_View->render()
+#4 /home/wap22/sites/ecommerce/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#5 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(75): Kohana_Response->body(Object(View))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#9 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#12 {main} in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:05:55 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 20 ] in file:line
+2014-12-03 11:05:55 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:06:10 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: ad_modifications ~ APPPATH/views/ad_modification.php [ 20 ] in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:06:10 --- DEBUG: #0 /home/wap22/sites/ecommerce/application/views/ad_modification.php(20): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/wap22/sit...', 20, Array)
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(61): include('/home/wap22/sit...')
+#2 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(348): Kohana_View::capture('/home/wap22/sit...', Array)
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(228): Kohana_View->render()
+#4 /home/wap22/sites/ecommerce/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#5 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(74): Kohana_Response->body(Object(View))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#9 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#12 {main} in /home/wap22/sites/ecommerce/application/views/ad_modification.php:20
+2014-12-03 11:07:02 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 20 ] in file:line
+2014-12-03 11:07:02 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:10:55 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 14 ] in file:line
+2014-12-03 11:10:55 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:11:16 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 14 ] in file:line
+2014-12-03 11:11:16 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:16:01 --- EMERGENCY: ErrorException [ 8 ]: Undefined variable: ad_modifications ~ APPPATH/views/ad_modification.php [ 14 ] in /home/wap22/sites/ecommerce/application/views/ad_modification.php:14
+2014-12-03 11:16:01 --- DEBUG: #0 /home/wap22/sites/ecommerce/application/views/ad_modification.php(14): Kohana_Core::error_handler(8, 'Undefined varia...', '/home/wap22/sit...', 14, Array)
+#1 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(61): include('/home/wap22/sit...')
+#2 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(348): Kohana_View::capture('/home/wap22/sit...', Array)
+#3 /home/wap22/sites/ecommerce/system/classes/Kohana/View.php(228): Kohana_View->render()
+#4 /home/wap22/sites/ecommerce/system/classes/Kohana/Response.php(160): Kohana_View->__toString()
+#5 /home/wap22/sites/ecommerce/application/classes/Controller/Admin.php(74): Kohana_Response->body(Object(View))
+#6 /home/wap22/sites/ecommerce/system/classes/Kohana/Controller.php(84): Controller_Admin->action_modifier()
+#7 [internal function]: Kohana_Controller->execute()
+#8 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#9 /home/wap22/sites/ecommerce/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 /home/wap22/sites/ecommerce/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 /home/wap22/sites/ecommerce/index.php(118): Kohana_Request->execute()
+#12 {main} in /home/wap22/sites/ecommerce/application/views/ad_modification.php:14
+2014-12-03 11:19:20 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 14 ] in file:line
+2014-12-03 11:19:20 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:25:11 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 14 ] in file:line
+2014-12-03 11:25:11 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:32:39 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 14 ] in file:line
+2014-12-03 11:32:39 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:34:08 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 14 ] in file:line
+2014-12-03 11:34:08 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line
+2014-12-03 11:36:04 --- EMERGENCY: ErrorException [ 1 ]: Cannot use object of type Model_Admin as array ~ APPPATH/views/ad_modification.php [ 14 ] in file:line
+2014-12-03 11:36:04 --- DEBUG: #0 [internal function]: Kohana_Core::shutdown_handler()
+#1 {main} in file:line

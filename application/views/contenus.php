@@ -51,6 +51,7 @@
                   </p>
 
                   <p class="livre_prix">Prix: <?= $contenu['prix']?> €</p>
+                  
                       <a href="<?= URL::base().'admin/modifier/' . $contenu["id"] ; ?>">
                         <input type="button" value="Modifier">
                       </a>
@@ -58,6 +59,11 @@
                         <button onclick="return confirm('Voulez supprimer le livre :')">Supprimer</button>
 
                       </a>
+                  </p>
+                  <p class="admin_retour">
+                    <a href="<?= URL::base().'produit/produits/' ; ?>">
+                          <input type="button" value="Retour">
+                    </a>
                   </p>
 
               </div>

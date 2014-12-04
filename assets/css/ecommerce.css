@@ -76,6 +76,7 @@ p {
 
 /* PRODUITS */
 
+
 section{
     text-align: left;
 }
@@ -94,22 +95,26 @@ section{
     border-bottom-width: 2px;
     border-bottom-color: #7e7975;
     margin-bottom: 10px;
-    margin-left: 20%;
+
 }
 
 
 .image_livre{
-  width: 40%;
-  text-align: left;
+  width: 30%;
+  margin-left:0;
+  margin-right:0;
 }
 
 .produit_livre{
-  width: 60%;
+  width: 65%;
   text-align: left;
   margin-top: -20px;
+  margin-left: 5%;
 }
 
-
+.produit_livre a{
+  text-decoration: none;
+}
 
 .livre_nom{
   font-size: 14pt;
@@ -144,6 +149,9 @@ section{
   margin-bottom: 0px;
 }
 
+.blog_liste_news_page{
+  text-align: center;
+}
 
 
 /* =============================================================== */
@@ -413,4 +421,117 @@ div{
   font-size: 10pt;
 }
 
+
+
+
+/* ----------------------------------- Headers  ------------------------------ */
+
+/* ------------------------------- Bandeau entête  --------------------------- */
+
+
+header{
+  border-style: solid;
+  border-width: 2px;
+  border-color: #7e7975;
+  color: white;
+  background: blue; 
+}
+
+header a{
+  text-decoration: none;
+  color:white;
+}
+
+header p{
+  font-style: normal;
+  font-weight: bold;
+  margin: 0px;
+  padding: 2px;
+}
+
+.bande_entete{
+    background-color: blue;
+    height: 50px;
+}
+
+
+.entete {
+    padding-left:                   10px;
+    padding-top:                    10px;
+    padding-bottom:                 10px;
+}
+
+.haut_page_nav{
+    width:                          55%;   
+    float:                          left;
+    vertical-align:                 top;
+}
+
+.haut_page_icons{
+    width:                          45%;
+    float:                          left;
+    vertical-align:                 top;
+    margin-top:                     -4px;
+}
+
+
+.haut_page_nav ul{
+    padding-left:                   0;
+    text-align:                     left;
+    list-style-type:                none;
+    margin-top:                     2px;
+    margin-bottom:                  4px;
+}
+
+.haut_page_nav li{
+    display:                        inline-block;
+    color:                          white;
+}
+
+.haut_page_nav li+li:before{
+        content:"|";
+}
+
+.haut_page_nav a{
+    font-style: normal;
+    font-weight: bold;
+    text-decoration:                none;
+    font-size:                      12pt;
+    opacity:                        0.7;
+    color:                          white;
+}
+
+.s_blanc{
+    color:                          white;
+    opacity:                        0.5;
+    font-size:                      10pt;
+}
+
+.icon{
+    padding-right:                  5px;  
+}
+
+
+.header_input_produits{
+
+    display:                        inline-block;
+    width:                          330px;
+    background-image:               url(../images/search_bg.jpg);
+    text-align:                     right;
+    border:                         2px solid;
+    border-radius:                  25px;
+    border-color:                   #919191;
+    text-align:                     left;
+}
+
+.header_button_produits{
+    border-right-style: solid;
+    border-color:  black;
+    border-radius: 4px 4px 4px 4px;
+    background-color: red;
+}
+
+.search_btn{
+padding-top: 2px;
+}
 
