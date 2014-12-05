@@ -32,13 +32,20 @@
                         <td class="cmd_td_article"><?= $panier[$i]['nom']?>: - Edition <?= substr($panier[$i]['date_edition'], 0, 4)?></td>
                         <td rowspan=2 class="cmd_td_unitaire"><?= $panier[$i]['prix']?> €</td>
                         <td rowspan=2 class="cmd_td_quantite"></td>
-                        <td rowspan=2 class="cmd_td_total"><?= $panier[$i]['prix']?> €</td>
+                        <td rowspan=2 class="cmd_td_total"><?= $panier[$i]['prix']; $_SESSION['prix'] = $panier[$i]['prix']; ?> €</td>
                     </tr>
                     <tr class="cmd_tr_td">
                         <td class="cmd_td_article-nom"><?= $panier[$i]['auteur']?> <?= $panier[$i]['editeur']?></td>
                     </tr>
 
                   <?php endfor; ?>
+
+                     <tr class="cmd_tr_td">
+                        <td class="cmd_td_article-total">TOTAL</td>
+                        <td></td>
+                        <td></td>
+                        <td class="cmd_td_article-total"></td>                        
+                    </tr>
 
 
                </table>

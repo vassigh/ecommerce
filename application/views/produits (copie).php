@@ -9,14 +9,12 @@
     
   </head>
   
-  <body class="body_produits">
+  <body>
 
-    <header>
-        <p class="agora">L'AGORA<span class="agora_partager"> de mes livres à partager</span></p>
-        <p class="agora_citation">la lecture... une amitié  <span class="agora_proust">(Marcel Proust)</span></p>
-    </header>
+    <header class="bande_entete clearfix">
 
-      <div class="bande_entete clearfix">
+
+      <div class="entete">
 
 
               <div class="haut_page_nav">
@@ -42,55 +40,24 @@
                           <a href="mailto:cvassigh@wanadoo.fr?subject=Notre affaire">Email</a>
                       </li>
                   </ul>
+              </div>
+              <div class="haut_page_icons">
 
               </div>
+      </div>
 
-                <form  action="" method="POST">
-                 <p class="bande_entete_categorie">
-                    <select name="categorie" id="categorie">
-                       <option value="tous livres" <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == '') echo 'selected' ?> >Tous livres</option>
-                     <optgroup label="Sciences humaines">
-                       <option value="Philosophie"> <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Philosophie') echo 'selected' ?>Philosophie</option>
-                       <option value="Psychologie" <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Psychologie') echo 'selected' ?>>Psychologie</option>
-                       <option value="Sociologie"  <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Sociologie') echo 'selected' ?>>Sociologie</option>
-                     </optgroup>
-                     <optgroup label="Politique">
-                       <option value="Politique"><?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Politique') echo 'selected' ?> Politique</option>
-                       <option value="Politique internationale" <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Politique internationale') echo 'selected' ?>>Politique internationale</option>
-                     </optgroup>
-                     <optgroup label="Littérature">
-                       <option value="Littérature étrangère" <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Littérature étrangère') echo 'selected' ?>>Littérature étrangère</option>
-                       <option value="Littérature française" <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Littérature française') echo 'selected' ?>>Littérature française</option>
-                     </optgroup>
-                     <optgroup label="Romance">
-                       <option value="Roman" <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Roman') echo 'selected' ?>>Roman</option>
-                       <option value="Roman étranger" <?php if (  isset($_SESSION['categorie']) && $_SESSION['categorie'] == 'Roman étranger') echo 'selected' ?>>Roman étranger</option>
-                     </optgroup>
-                   </select>
-
-                    <input type="submit" value="Validez"> 
-                 </p>
-                </form>
-
-      </div>  <!-- Fin entête -->
-
-
+    </header>
 
       <section>
 
-          <form  action="" method="POST">
-            <input class="input_search_produits" type="text" name="search" id="nom" placeholder="quel livre cherchez-vous?" size="50" maxlength="30" /></input> 
-            <button class="button_produits" type="submit" title="Rechercher" STYLE= "background-color: black">
-              <img class="search_btn" src="/ecommerce/assets/pictures/search_btn.jpg" alt="search_btn"></img>
-            </button>
-          </form>
-  
+          <h1 class="titre_produits"></h1>
+          
           <?php for ($i=0; $i<count($produit); $i++) : ?>
 
               <article class="article">
 
                   <div class="image_livre">
-                      <img class="image_livre_img" src="/ecommerce/assets/pictures/<?=$produit[$i]['image']?>"  alt="img">
+                      <img src="/ecommerce/assets/pictures/<?=$produit[$i]['image']?>"  alt="img">
                   </div>
 
                   <div class="produit_livre">
@@ -113,7 +80,7 @@
                       </p>
                       <p class="livre_prix">Prix: <?= $produit[$i]['prix']?> €</p>
 
-                        <a class="logo_ajout_panier" href="<?= URL::base().'panier/ajouter/' . $produit[$i]["id"] ; ?>">
+                        <a href="<?= URL::base().'panier/ajouter/' . $produit[$i]["id"] ; ?>">
                           <img src="/ecommerce/assets/pictures/ajout_panier.jpeg" alt="img" width='100px'>
                         </a>
 
@@ -126,11 +93,11 @@
 
 
       <!-- Paginations bas -->
-      <div class="ligne_pagination">
+      <div>
         <?php
             if ($_SESSION['nbpages'] > 0)
             {
-              echo '<p>Pages: ';
+              echo '<p class="blog_liste_news_page">Pages: ';
               for ($k=0; $k<$_SESSION['nbpages']; $k++) 
               {
                 $page=$k + 1;

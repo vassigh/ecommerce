@@ -5,40 +5,29 @@
 
 
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v11/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
-
+    font-family: "Ma Super Fonte Titre";
+    src: url('SpecialElite.woff');
 }
 @font-face {
-  font-family: 'Pinyon Script';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Pinyon Script'), local('PinyonScript'), url(http://fonts.gstatic.com/s/pinyonscript/v6/TzghnhfCn7TuE73f-CBQ0BEVhAA1gnTRu3Am0EzDRlM.woff) format('woff');
-}
-
-
-@font-face {
-    font-family: "Ma Super Fonte";
-    src: url('MaSuperFonte-Regular.ttf');
+    font-family: "Ma Super Fonte Paragraphe";
+    font-style: normal;
+    src: url('cardo-regular.woff');
 }
 @font-face {
-    font-family: "Ma Super Fonte";
+    font-family: "Ma Super Fonte Paragraphe";
     font-style: italic;
-    src: url('MaSuperFonte-Italic.ttf');
+    src: url('cardo-italic.woff');
 }
 @font-face {
-    font-family: "Ma Super Fonte";
+    font-family: "Ma Super Fonte Paragraphe";
     font-weight: bold;
-    src: url('MaSuperFonte-Bold.ttf');
+    src: url('cardo-bold.woff');
 }
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt mollitia aliquid neque id illum, 
 
-
-body {
+.body_produits {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    background-color: #7e7975;
 }
 
 h1 {
@@ -57,7 +46,7 @@ h3 {
     font-style: italic;
     font-weight: bold;
 }
-p {
+p {'%' . $search .'%'
     /* Utilisera MaSuperFonte-Regular.ttf */
     font-style: normal;
     font-weight: normal;
@@ -78,7 +67,8 @@ p {
 
 
 section{
-    text-align: left;
+    margin-left: 140px;
+    margin-top: 20px;
 }
 
 .titre_produits{
@@ -91,25 +81,27 @@ section{
     display: -webkit-flex;
     display: Flex;
     align-items:stretch;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: #7e7975;
-    margin-bottom: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black; 
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 30px;
 
 }
 
 
 .image_livre{
-  width: 30%;
-  margin-left:0;
-  margin-right:0;
+  width: 40%;
 }
 
+
 .produit_livre{
-  width: 65%;
   text-align: left;
   margin-top: -20px;
-  margin-left: 5%;
 }
 
 .produit_livre a{
@@ -149,10 +141,13 @@ section{
   margin-bottom: 0px;
 }
 
-.blog_liste_news_page{
-  text-align: center;
+.ligne_pagination{
+  margin-left: 200px;
 }
 
+.logo_ajout_panier{
+  padding-left: 180px;
+}
 
 /* =============================================================== */
 /* Commande 
@@ -164,13 +159,14 @@ section{
   border-style: solid;
   border-width: 2px;
   border-color: #D3D3D3;
+  margin-left: 0px;
 }
 
 
 
 .table_commande_titre{
   width: 100%;
-
+  
 }
 
 .table_commande_liste{
@@ -426,40 +422,71 @@ div{
 
 /* ----------------------------------- Headers  ------------------------------ */
 
-/* ------------------------------- Bandeau entête  --------------------------- */
+/* -------------------------------      entête  --------------------------- */
 
 
 header{
-  border-style: solid;
-  border-width: 2px;
-  border-color: #7e7975;
-  color: white;
-  background: blue; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: #7e7975;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #BF4C55;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-header a{
+.agora{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: italic;
+    font-style: bold;
+    font-size: 40pt;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.agora_partager{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: normal;
+    font-size: 20pt;
+}
+
+.agora_citation{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: italic;
+    font-size: 15pt;
+    text-align: right;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+}
+
+.agora_proust{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: normal;
+    font-size: 10pt;
+}
+
+.bande_entete a{
   text-decoration: none;
   color:white;
 }
 
-header p{
+.bande_entete p{
   font-style: normal;
   font-weight: bold;
-  margin: 0px;
-  padding: 2px;
+  padding-left: 6px;
+  margin-top: 0px;
+  padding-top: 10px;
 }
 
 .bande_entete{
     background-color: blue;
-    height: 50px;
+    height: 40px;
 }
 
 
-.entete {
-    padding-left:                   10px;
-    padding-top:                    10px;
-    padding-bottom:                 10px;
-}
 
 .haut_page_nav{
     width:                          55%;   
@@ -471,7 +498,7 @@ header p{
     width:                          45%;
     float:                          left;
     vertical-align:                 top;
-    margin-top:                     -4px;
+    margin-top:                     0px;
 }
 
 
@@ -479,8 +506,8 @@ header p{
     padding-left:                   0;
     text-align:                     left;
     list-style-type:                none;
-    margin-top:                     2px;
-    margin-bottom:                  4px;
+    margin-top:                     0px;
+    margin-bottom:                  0px;
 }
 
 .haut_page_nav li{
@@ -512,19 +539,32 @@ header p{
 }
 
 
-.header_input_produits{
+.bande_entete_categorie{
+    padding-top: 10px;
+}
 
-    display:                        inline-block;
-    width:                          330px;
+
+/* -------------------------------      produits  --------------------------- */
+
+
+
+.input_search_produits{
+    width:                          400px;
     background-image:               url(../images/search_bg.jpg);
     text-align:                     right;
     border:                         2px solid;
     border-radius:                  25px;
     border-color:                   #919191;
     text-align:                     left;
+    margin-bottom:                  40px;
+    margin-left:                    40px;
+    padding-left:                   10px;
+    padding-top:                    10px;
+    padding-bottom:                 10px;
+
 }
 
-.header_button_produits{
+.button_produits{
     border-right-style: solid;
     border-color:  black;
     border-radius: 4px 4px 4px 4px;
@@ -532,6 +572,6 @@ header p{
 }
 
 .search_btn{
-padding-top: 2px;
+padding-top: 5px;
 }
 

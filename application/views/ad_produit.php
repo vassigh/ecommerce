@@ -46,21 +46,21 @@
                  <select name="categorie" id="categorie">
                      <option value="rien"></option>
                    <optgroup label="Sciences humaines">
-                     <option value="philosophie">Philosophie</option>
-                     <option value="psychologie">Psychologie et psychanalyse</option>
-                     <option value="sociologie">Sociologie</option>
+                     <option value="Philosophie">Philosophie</option>
+                     <option value="Psychologie">Psychologie</option>
+                     <option value="Sociologie">Sociologie</option>
                    </optgroup>
                    <optgroup label="Politique">
-                     <option value="politique">Politique</option>
-                     <option value="international">Politique internationalle</option>
+                     <option value="Politique">Politique</option>
+                     <option value="Politique internationale">Politique internationale</option>
                    </optgroup>
                    <optgroup label="Littérature">
-                     <option value="lit_etr">Littérature étrangère </option>
-                     <option value="lit_fr">Littérature française</option>
+                     <option value="Littérature étrangère">Littérature étrangère</option>
+                     <option value="Littérature française">Littérature française</option>
                    </optgroup>
                    <optgroup label="Romance">
-                     <option value="roman">Roman</option>
-                     <option value="roman_etr">Roman étranger</option>
+                     <option value="Roman">Roman</option>
+                     <option value="Roman étranger">Roman étranger</option>
                    </optgroup>
                  </select>
                </p>

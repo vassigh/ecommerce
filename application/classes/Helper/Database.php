@@ -12,7 +12,7 @@ class Helper_Database
         $dbname     = $config->get("dbname", "database");
 
         $this->db = new PDO( $dns . "; dbname=" . $dbname , $user , $password);
-
+         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->db->exec("SET NAMES UTF8");
 
     }

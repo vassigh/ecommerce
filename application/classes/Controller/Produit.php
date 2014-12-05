@@ -14,10 +14,24 @@ class Controller_Produit extends Controller {
 		session_start();
 		$produit_model = new Model_produit();
 		$view = View::Factory("produits");
-		$produit = $produit_model->getLatestProduits(0,0);
 
 
-  		$limit= 3;              // limit de produits par page
+		$search='';
+		if (  array_key_exists("search", $_POST) && !empty($_POST["search"] ) )
+		{
+			$search=$_POST["search"];
+		}
+
+		$categorie='';
+    	if (  array_key_exists("categorie", $_POST)  && !empty($_POST["categorie"]) )
+    	{
+      		$categorie=$_POST["categorie"];
+      		$_SESSION['categorie'] = $categorie;
+      		if ($categorie=='tous livres') $categorie = '';
+      	}
+
+		$produit = $produit_model->getLatestProduits(0,0,$categorie, $search );
+  		$limit= 4;              // limit de produits par page
     	$nbpages= intval(count($produit)/$limit);
     	if(count($produit)%$limit > 0) $nbpages++;
 		$_SESSION['nbpages'] = $nbpages;
@@ -28,7 +42,7 @@ class Controller_Produit extends Controller {
 		{
         	$p = $limit * ($this->request->param('id')-1);  
         }
-        $produit = $produit_model->getLatestProduits($limit, $p);
+        $produit = $produit_model->getLatestProduits($limit, $p, $categorie, $search);
 
 		$view->produit=$produit;
 		$this->response->body($view);

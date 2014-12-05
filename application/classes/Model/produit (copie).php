@@ -31,8 +31,8 @@ class Model_Produit
                 else
                 {
                     $nom=$this->db->query("select * from produits 
-                    WHERE produits.nom LIKE ? OR produits.auteur LIKE ?
-                    order by produits.id asc", array('%' . $search .'%', '%' . $search .'%'));
+                    WHERE produits.nom LIKE ? or WHERE produits.auteur LIKE ?
+                    order by produits.id asc", array('%' . $search .'%', '%' . $search .'%' ));
                 }
             }
             else
@@ -46,8 +46,8 @@ class Model_Produit
                 else
                 {
                     $nom=$this->db->query("select * from produits 
-                    where produits.categorie = ?  And ( produits.nom LIKE ? OR produits.auteur LIKE ? )
-                    order by produits.id asc", array($categorie, '%' . $search .'%', '%' . $search .'%')); 
+                    where produits.categorie = ?  And produits.nom LIKE ?
+                    order by produits.id asc", array($categorie, '%' . $search .'%')); 
                  }              
             }
         }
@@ -63,8 +63,8 @@ class Model_Produit
                 else
                 {
                      $nom=$this->db->query("select * from produits 
-                     where produits.nom LIKE ? OR produits.auteur LIKE ?
-                     order by produits.id asc limit $number offset $offset", array('%' . $search .'%', '%' . $search .'%'));
+                     where produits.nom LIKE ? 
+                     order by produits.id asc limit $number offset $offset", array('%' . $search .'%'));
                  }
             }
             else
@@ -79,8 +79,8 @@ class Model_Produit
                 {
                     var_dump('D');
                     $nom=$this->db->query("select * from produits 
-                    where produits.categorie = ? And ( produits.nom LIKE ? OR produits.auteur LIKE ? )
-                    order by produits.id asc limit $number offset $offset", array($categorie, '%' . $search .'%', '%' . $search .'%'));
+                    where produits.categorie = ? And produits.nom LIKE ?
+                    order by produits.id asc limit $number offset $offset", array($categorie, '%' . $search .'%'));
                 }              
             }
 
