@@ -12,9 +12,9 @@ class Model_Admin
     // Adminisatation des produits Ajouter - Modifier et supprimer -------------- //
 
 
-    public function insertProduit($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image)
+    public function insertProduit($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image, $quantite, $ean13, $resume)
     {
-        $id=$this->db->execute("insert into produits(nom, auteur, editeur, categorie, date_edition, prix, image) values (?,?,?,?,?,?,?)", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image));
+        $id=$this->db->execute("insert into produits(nom, auteur, editeur, categorie, date_edition, prix, image, quantite, ean13, resume) values (?,?,?,?,?,?,?,?,?,?)", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image, $quantite, $ean13, $resume));
         return $id;
     }
 
@@ -24,15 +24,15 @@ class Model_Admin
         return $id;
     }
 
-    public function updateProduit_image($id, $nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image)
+    public function updateProduit_image($id, $nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image, $quantite, $ean13, $resume)
     {
-        $id=$this->db->execute("update produits SET nom=?, auteur=?, editeur=?, categorie=?, date_edition=?, prix=?, image=? where id = ?", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image, $id));
+        $id=$this->db->execute("update produits SET nom=?, auteur=?, editeur=?, categorie=?, date_edition=?, prix=?, image=?, quantite=?, ean13=?, resume=? where id = ?", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image, $quantite, $ean13, $resume ,$id));
         return $id;
     }
 
-    public function updateProduit($id, $nom, $auteur, $editeur, $categorie, $date_edition, $prix)
+    public function updateProduit($id, $nom, $auteur, $editeur, $categorie, $date_edition, $prix, $quantite, $ean13, $resume)
     {
-        $id=$this->db->execute("update produits SET nom=?, auteur=?, editeur=?, categorie=?, date_edition=?, prix=? where id = ?", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $id));
+        $id=$this->db->execute("update produits SET nom=?, auteur=?, editeur=?, categorie=?, date_edition=?, prix=?, quantite=?, ean13=?, resume=? where id = ?", array($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $quantite, $ean13, $resume, $id));
         return $id;
     }
 

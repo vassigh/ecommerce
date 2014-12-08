@@ -12,10 +12,15 @@
   <body>
 
  
-        <div class="formulaire_admin_ajout">
+        <div class="ad_modification_php">
 
+            <h3>Modification des caractéristiques du livre</h3>
+            <form action="" method="POST" enctype="multipart/form-data">
 
-            <form class="login" action="" method="POST" enctype="multipart/form-data">
+              <p>
+                <label for="ean13">EAN 13 :</label></br>
+                <input type="text" name="ean13" id="ean13" value="<?=$ad_modification['ean13'];?>" size="11" maxlength="13"/>
+              </p>
               <p>
                 <label for="nom">Nom :</label></br>
                 <input type="text" name="nom" id="nom" value="<?=$ad_modification['nom'];?>" size="70"/>
@@ -40,25 +45,28 @@
                  <select name="categorie" id="categorie">
                      <option selected value="<?=$ad_modification['categorie'];?>"><?=$ad_modification['categorie'];?></option>
                    <optgroup label="Sciences humaines">
-                     <option value="philosophie">Philosophie</option>
-                     <option value="psychologie">Psychologie et psychanalyse</option>
-                     <option value="sociologie">Sociologie</option>
+                     <option value="Philosophie">Philosophie</option>
+                     <option value="Psychologie">Psychologie</option>
+                     <option value="Sociologie">Sociologie</option>
                    </optgroup>
                    <optgroup label="Politique">
-                     <option value="politique">Politique</option>
-                     <option value="international">Politique internationalle</option>
+                     <option value="Politique">Politique</option>
+                     <option value="Politique internationale">Politique internationale</option>
                    </optgroup>
                    <optgroup label="Littérature">
-                     <option value="lit_etr">Littérature étrangère </option>
-                     <option value="lit_fr">Littérature française</option>
+                     <option value="Littérature étrangèr">Littérature étrangère</option>
+                     <option value="Littérature française">Littérature française</option>
                    </optgroup>
                    <optgroup label="Romance">
-                     <option value="roman">Roman</option>
-                     <option value="roman_etr">Roman étranger</option>
+                     <option value="Roman">Roman</option>
+                     <option value="Roman étranger">Roman étranger</option>
                    </optgroup>
                  </select>
                </p>
 
+              <p><span class="formulaire_admin_ajout_libelle">Quantité :</span>
+                <input type="number" name="quantite" id="quantite" value="<?=$ad_modification['quantite'];?>" min="0"/>
+              </p>
 
 
               <img class="i_image_livre" 
@@ -66,8 +74,12 @@
                 src="/ecommerce/assets/pictures/<?php echo($ad_modification['image']); ?>"
                 alt="img">
 
-              <p>Modifier l'image de la couverture</br>
-                <input type="file" name="file"/>
+              <p>Modifier l'image de la couverture</br><input type="file" name="file"/></p>
+
+              <p class="formulaire_admin_ajout_resume">
+                Description - Résumé :<br />
+                <textarea class="formulaire_admin_ajout_resume_texte" rows="10" cols="55" name="resume"><?=$ad_modification['resume'];?>
+                </textarea><br /><br /> 
               </p>
 
               <p>

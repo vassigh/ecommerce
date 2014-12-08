@@ -12,31 +12,34 @@
   <body>
 
 
-    <section>
+    <section class="contenu_php_section">
 
 
-      <h1 class="titre_detail">Détail du livre</h1>
+      <h1 class="contenu_php_titre">Détail du livre</h1>
 
+  
+
+<!--   Date du jour enlevé
         <?php
         // Calendrier
-          echo  '<p class="calendrier">';
-            setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
+   //       echo  '<p class="calendrier">';
+   //         setlocale (LC_TIME, 'fr_FR.utf8','fra'); 
 
             // calendrier persan
-            echo strftime("%A %d %B") . ' ' . date("Y") . '<br/>'; 
+     //       echo ucfirst(strftime("%A %d %B")) . ' ' . date("Y") . '<br/>'; 
             // echo mds_date("l j F Y");
          
-          echo '</p>';
+    //      echo '</p>';
         ?>
           
+-->
+          <article class="contenu_php_article">
 
-          <article class="article">
-
-              <div class="image_livre">
+              <div class="contenu_php_image_livre">
                   <img class="i_image_livre" src="/ecommerce/assets/pictures/<?=$contenu['image']?>" alt="img">
               </div>
 
-              <div class="produit_livre">
+              <div class="contenu_php_produit_livre">
                   <p class="livre_nom"><?= $contenu['nom']?></p>
                   <p class="livre_auteur"><?= $contenu['auteur']?></p>
                   <p class="livre_editeur">Editeur : <?= $contenu['editeur']?></p>
@@ -51,24 +54,26 @@
                   </p>
 
                   <p class="livre_prix">Prix: <?= $contenu['prix']?> €</p>
-                  
-                      <a href="<?= URL::base().'admin/modifier/' . $contenu["id"] ; ?>">
-                        <input type="button" value="Modifier">
-                      </a>
+  
+                  <p class="contenu_php_admin_boutons">                
+                      <a class="contenu_php_admin_modifier" href="<?= URL::base().'admin/modifier/' . $contenu["id"] ; ?>">
+                        <input type="button" value="Modifier"></a>
                       <a href="<?= URL::base().'admin/supprimer/' . $contenu["id"] ; ?>">
-                        <button onclick="return confirm('Voulez supprimer le livre :')">Supprimer</button>
-
-                      </a>
+                        <button onclick="return confirm('Voulez supprimer le livre :')">Supprimer</button></a>
                   </p>
-                  <p class="admin_retour">
-                    <a href="<?= URL::base().'produit/produits/' ; ?>">
-                          <input type="button" value="Retour">
-                    </a>
+                  <p class="contenu_php_admin_retour">
+                    <a href="<?= URL::base().'produit/produits/' ; ?>"><input type="button" value="Retour"></a>
                   </p>
 
               </div>
+         </article> 
 
-          </article> 
+         <h4 class="contenu_php_titre_ean13_quantite">EAN13: <?= $contenu['ean13']?></h4>
+
+         <h4 class="contenu_php_titre_resume"><u>Description et résumé du livre</u></h4>
+         <div class="contenu_php_bloc_resume">
+            <p class="contenu_php_texte_resume"><?= $contenu['resume']?></p>
+         </div>
 
 
     </section>

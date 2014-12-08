@@ -28,17 +28,34 @@
               <table class="table_commande_liste">
                   <?php for ($i=0; $i<count($panier); $i++) : ?>
 
+                    <?php $quantite = array_count_values($_SESSION['panier'])[$panier[$i]['id']]; ?>
                     <tr class="cmd_tr_td">
                         <td class="cmd_td_article"><?= $panier[$i]['nom']?>: - Edition <?= substr($panier[$i]['date_edition'], 0, 4)?></td>
                         <td rowspan=2 class="cmd_td_unitaire"><?= $panier[$i]['prix']?> €</td>
-                        <td rowspan=2 class="cmd_td_quantite"></td>
-                        <td rowspan=2 class="cmd_td_total"><?= $panier[$i]['prix']?> €</td>
+                        <td rowspan=2 class="cmd_td_quantite"><?= $quantite; ?></td>
+                        <td rowspan=2 class="cmd_td_total"><?= $panier[$i]['prix'] * $quantite; 
+                                        if( $i == 0  )
+                                        {
+                                          $_SESSION['commande_prix'] = $panier[$i]['prix'] * $quantite;
+                                        }
+                                        else
+                                        {
+                                          $_SESSION['commande_prix'] += $panier[$i]['prix'] * $quantite;
+                                        }
+                                        ?> €</td>
                     </tr>
                     <tr class="cmd_tr_td">
-                        <td class="cmd_td_article-nom"><?= $panier[$i]['auteur']?> <?= $panier[$i]['editeur']?></td>
+                        <td class="cmd_td_article_nom"><?= $panier[$i]['auteur']?> <?= $panier[$i]['editeur']?></td>
                     </tr>
 
                   <?php endfor; ?>
+
+                     <tr class="cmd_tr_td_total">
+                        <td></td>
+                        <td></td>
+                        <td class="cmd_td_article_total">TOTAL</td>
+                        <td class="cmd_td_total_total"><?= $_SESSION['commande_prix']; ?> €</td>                        
+                    </tr>
 
 
                </table>
@@ -47,16 +64,23 @@
 
           <div>
               <p class="achat_logo">
-                <a href="">
+                <a href="<?= URL::base().'user/login' ; ?>">
                   <img src="/ecommerce/assets/pictures/acheter.jpg" alt="img" width='150px'>
                 </a>
               </p>
 
               <p class="achat_retour">
                 <a href="<?= URL::base().'produit/produits' ; ?>">
+                      <input type="button" value="Nouvele commande?">
+                </a>
+              </p>
+
+              <p class="panier_retour">
+                <a href="<?= URL::base().'produit/produits/retour' ?>">
                       <input type="button" value="Retour">
                 </a>
               </p>
+              
           </div>
 
 

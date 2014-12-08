@@ -52,7 +52,9 @@ class Controller_Admin extends Controller {
 	     	  array_key_exists("editeur", $_POST)    	 && !empty($_POST["editeur"])       &&
 	     	  array_key_exists("categorie", $_POST)  	 && !empty($_POST["categorie"])     &&
 	     	  array_key_exists("date_edition", $_POST)   && !empty($_POST["date_edition"])  &&
-	     	  array_key_exists("prix", $_POST)  	 	 && !empty($_POST["prix"])     
+	     	  array_key_exists("prix", $_POST)  	 	 && !empty($_POST["prix"])  		&&  
+	     	  array_key_exists("quantite", $_POST)  	 && !empty($_POST["quantite"])  	&& 
+	     	  array_key_exists("ean13", $_POST)  	 	 && !empty($_POST["ean13"])  		 
 	       )
 	    {
 	        $nom  			= $_POST["nom"];
@@ -61,14 +63,26 @@ class Controller_Admin extends Controller {
 	        $categorie  	= $_POST["categorie"];
 	        $date_edition   = $_POST["date_edition"];
 	        $prix	     	= $_POST["prix"];
+	        $quantite	   	= $_POST["quantite"];
+	        $ean13	     	= $_POST["ean13"];
+
+
+	        if (array_key_exists("resume", $_POST) && !empty($_POST["resume"]) )
+	        {
+	        	$resume	= $_POST["resume"];
+	        }
+	        else
+	        {
+	        	$resume	= '';
+	        }
 
 	        if ( isset($_FILES['file']['name']) && $_FILES['file']['name'] != '' )
 	        {
-	      		$ad_modification = $ad_model->updateProduit_image($this->request->param('id'), $nom, $auteur, $editeur, $categorie, $date_edition, $prix, $_FILES['file']['name']);
+	      		$ad_modification = $ad_model->updateProduit_image($this->request->param('id'), $nom, $auteur, $editeur, $categorie, $date_edition, $prix, $_FILES['file']['name'], $quantite, $ean13, $resume);
 	      	}
 	      	else
 	      	{
-	      		$ad_modification = $ad_model->updateProduit($this->request->param('id'), $nom, $auteur, $editeur, $categorie, $date_edition, $prix, '');	      		
+	      		$ad_modification = $ad_model->updateProduit($this->request->param('id'), $nom, $auteur, $editeur, $categorie, $date_edition, $prix, $quantite, $ean13, $resume);	      		
 	      	}
 	      	$ad_modification = $ad_model->getProduit($this->request->param('id'));
 	    }

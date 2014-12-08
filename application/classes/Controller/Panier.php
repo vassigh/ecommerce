@@ -16,6 +16,14 @@ class Controller_Panier extends Controller {
 		};
 
 		$paniers = new Model_panier();
+
+		$this->redirect("panier/view_panier");
+ 	}
+
+	public function action_view_panier()
+	{
+		session_start();
+		$paniers = new Model_panier();
 		$view = View::Factory("panier");
 		$panier = $paniers->getPanier($_SESSION['panier']);
 
@@ -23,16 +31,53 @@ class Controller_Panier extends Controller {
 		$this->response->body($view);
  	}
 
+
+
 	public function action_commande()
 	{
 		session_start();
 		$paniers = new Model_panier();
 		$view = View::Factory("panier_commande");
+
 		$panier = $paniers->getPanier($_SESSION['panier']);
 
 		$view->panier=$panier;
 		$this->response->body($view);
  	}
 
+	public function action_achat()
+	{
+		session_start();
+		$paniers = new Model_panier();
+		$view = View::Factory("achat");
+
+
+		$panier = $paniers->getPanier($_SESSION['panier']);
+
+		$id_commande = $paniers->insertCommande($_SESSION['user_id']);
+		$_SESSION['id_commande'] = $id_commande;
+		$commande_produit = $paniers->insert_update_Commande_produits($id_commande, $panier);
+
+		$this->redirect("panier/view_achat");
+
+	//	$view->panier=$panier;
+	//	$view->commande_produit=$id_commande;
+		
+	//	$this->response->body($view);
+ 	}
+
+	public function action_view_achat()
+	{
+		session_start();
+		$paniers = new Model_panier();
+		$view = View::Factory("achat");
+		$panier = $paniers->getPanier($_SESSION['panier']);
+
+		$user   = $paniers->getUser($_SESSION['user_id']['id']);
+		
+		$view->user=$user;
+		$view->panier=$panier;
+		$this->response->body($view);
+ 	}
 
 } // End 

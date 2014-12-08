@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 
   <head>
-    <title>TP Ecommerce</title>
+    <title>L'AGORA de mes livres</title>
     <link rel="stylesheet" href="/ecommerce/assets/css/ecommerce.css">
     <meta charset="utf-8">
     <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />

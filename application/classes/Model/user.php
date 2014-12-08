@@ -17,9 +17,9 @@ class Model_User
         return $id;
     }
 
-    public function insertUser($nom, $prenom, $email, $pass)
+    public function insertUser($nom, $prenom, $email, $pass, $adresse, $pays, $ville, $code, $tel)
     {
-        $id=$this->db->execute("insert into users(nom, prenom, email, password) values (?,?,?,?)", array($nom, $prenom, $email, $pass));
+        $id=$this->db->execute("insert into users(nom, prenom, email, password, adresse, pays, ville, code, tel) values (?,?,?,?,?,?,?,?,?)", array($nom, $prenom, $email, $pass, $adresse, $pays, $ville, $code, $tel));
         return $id;
     }
 
@@ -29,21 +29,6 @@ class Model_User
         return $id;
     }
 
-    // PRODUITS ------------------------------------- //
-
-/*
-    public function insertProduit($nom, $prenom, $email, $pass)
-    {
-        $id=$this->db->execute("insert into users(nom, prenom, email, password) values (?,?,?,?)", array($nom, $prenom, $email, $pass));
-        return $id;
-    }
-
-    public function getProduit($id)
-    {
-        $id=$this->db->queryOne("select * from produits where id = ?", array($id));
-        return $id;
-    }
-*/
 
 
 }
