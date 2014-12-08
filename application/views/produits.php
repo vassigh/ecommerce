@@ -40,6 +40,7 @@
                       <li>
                           <a href="mailto:cvassigh@wanadoo.fr?subject=Notre affaire">Email</a>
                       </li>
+
                 </ul>
             </div>
 
@@ -71,7 +72,6 @@
                 </form>
 
       </div>  <!-- Fin entête -->
-
 
 
       <section>

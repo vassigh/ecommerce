@@ -32,6 +32,7 @@
                     <tr class="cmd_tr_td">
                         <td class="cmd_td_article"><?= $panier[$i]['nom']?>: - Edition <?= substr($panier[$i]['date_edition'], 0, 4)?></td>
                         <td rowspan=2 class="cmd_td_unitaire"><?= $panier[$i]['prix']?> €</td>
+
                         <td rowspan=2 class="cmd_td_quantite"><?= $quantite; ?></td>
                         <td rowspan=2 class="cmd_td_total"><?= $panier[$i]['prix'] * $quantite; 
                                         if( $i == 0  )
@@ -43,6 +44,7 @@
                                           $_SESSION['commande_prix'] += $panier[$i]['prix'] * $quantite;
                                         }
                                         ?> €</td>
+
                     </tr>
                     <tr class="cmd_tr_td">
                         <td class="cmd_td_article_nom"><?= $panier[$i]['auteur']?> <?= $panier[$i]['editeur']?></td>
@@ -50,11 +52,13 @@
 
                   <?php endfor; ?>
 
+
                      <tr class="cmd_tr_td_total">
                         <td></td>
                         <td></td>
                         <td class="cmd_td_article_total">TOTAL</td>
                         <td class="cmd_td_total_total"><?= $_SESSION['commande_prix']; ?> €</td>                        
+
                     </tr>
 
 
