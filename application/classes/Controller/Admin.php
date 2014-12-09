@@ -14,23 +14,46 @@ class Controller_Admin extends Controller {
 		$ad_produits=0;
 
 
-
 	    if (  array_key_exists("nom", $_POST)        	 && !empty($_POST["nom"]) 		    &&
 	    	  array_key_exists("auteur", $_POST)  		 && !empty($_POST["auteur"])        &&
 	     	  array_key_exists("editeur", $_POST)    	 && !empty($_POST["editeur"])       &&
 	     	  array_key_exists("categorie", $_POST)  	 && !empty($_POST["categorie"])     &&
 	     	  array_key_exists("date_edition", $_POST)   && !empty($_POST["date_edition"])  &&
-	     	  array_key_exists("prix", $_POST)  	 	 && !empty($_POST["prix"])     
+	     	  array_key_exists("prix", $_POST)  	 	 && !empty($_POST["prix"])			&& 
+	     	  array_key_exists("quantite", $_POST) 		 && $_POST["quantite"] > 0       	&&	 								  	 
+	     	  array_key_exists("ean13", $_POST)  	 	 && !empty($_POST["ean13"])       
 	       )
 	    {
+
 	        $nom  			= $_POST["nom"];
 	        $auteur     	= $_POST["auteur"];
 	        $editeur    	= $_POST["editeur"];
 	        $categorie  	= $_POST["categorie"];
 	        $date_edition   = $_POST["date_edition"];
 	        $prix	     	= $_POST["prix"];
+	        $quantite	   	= $_POST["quantite"];
+	        $ean13	     	= $_POST["ean13"];
 
-	    	$ad_produits = $ad_ajout_model->insertProduit($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $_FILES['file']['name']);
+
+	        if ( isset($_FILES['file']['name']) && $_FILES['file']['name'] != '' )
+	        {
+	        	$image = $_FILES['file']['name'];
+	        }
+	        else
+	        {
+	        	$image = '';	        	
+	        };
+
+	        if (array_key_exists("resume", $_POST) && !empty($_POST["resume"]) )
+	        {
+	        	$resume	= $_POST["resume"];
+	        }
+	        else
+	        {
+	        	$resume	= '';
+	        }
+
+	    	$ad_produits = $ad_ajout_model->insertProduit($nom, $auteur, $editeur, $categorie, $date_edition, $prix, $image, $quantite, $ean13, $resume);
 	
 	    }
 	    
@@ -53,7 +76,7 @@ class Controller_Admin extends Controller {
 	     	  array_key_exists("categorie", $_POST)  	 && !empty($_POST["categorie"])     &&
 	     	  array_key_exists("date_edition", $_POST)   && !empty($_POST["date_edition"])  &&
 	     	  array_key_exists("prix", $_POST)  	 	 && !empty($_POST["prix"])  		&&  
-	     	  array_key_exists("quantite", $_POST)  	 && !empty($_POST["quantite"])  	&& 
+	     	  array_key_exists("quantite", $_POST)  	 								  	&& 
 	     	  array_key_exists("ean13", $_POST)  	 	 && !empty($_POST["ean13"])  		 
 	       )
 	    {
@@ -65,7 +88,6 @@ class Controller_Admin extends Controller {
 	        $prix	     	= $_POST["prix"];
 	        $quantite	   	= $_POST["quantite"];
 	        $ean13	     	= $_POST["ean13"];
-
 
 	        if (array_key_exists("resume", $_POST) && !empty($_POST["resume"]) )
 	        {

@@ -34,7 +34,7 @@
                                             substr($panier[$i]['date_edition'],0,4)
                                             ?>.
                               </p>
-                              <p class="livre_prix"><?= $panier[$i]['prix']?> € 
+                              <p class="livre_prix"><?= $panier[$i]['prix'] ?> € (ttc)
                               --> Quantité: <?= array_count_values($_SESSION['panier'])[$panier[$i]['id']]; ?></p>
                           </div>
 

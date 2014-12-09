@@ -54,13 +54,183 @@ h3 {
 }
 
 
+/* =============================================================== */
+/* PRODUITS 
+/* =============================================================== */
 
-/* PRODUITS */
 
+/* ----------------------------------- Headers  ------------------------------ */
+
+/* -------------------------------      entête  --------------------------- */
+
+
+header{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #7e7975;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #BF4C55;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.agora{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: italic;
+    font-style: bold;
+    font-weight: bold;
+    font-size: 40pt;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.agora_partager{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: normal;
+    font-size: 20pt;
+}
+
+.agora_citation{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: italic;
+    font-size: 15pt;
+    text-align: right;
+    margin-top: -25px;
+    margin-bottom: 0px;
+    padding-right: 0px;
+}
+
+.agora_proust{
+    font-family: "Ma Super Fonte Paragraphe", Arial ;
+    font-style: normal;
+    font-size: 10pt;
+}
+
+.bande_entete a{
+  text-decoration: none;
+  color:white;
+}
+
+.bande_entete p{
+  font-style: normal;
+  font-weight: bold;
+  padding-left: 6px;
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+.bande_entete{
+    background-color: blue;
+    height: 40px;
+}
+
+
+
+.haut_page_nav{
+    width:                          55%;   
+    float:                          left;
+    margin-top:                     10px;
+    padding-left:                   20px;
+}
+
+.haut_page_icons{
+    width:                          45%;
+    float:                          left;
+    vertical-align:                 top;
+    margin-top:                     0px;
+}
+
+
+.haut_page_nav ul{
+    padding-left:                   0;
+    text-align:                     left;
+    list-style-type:                none;
+    margin-top:                     0px;
+    margin-bottom:                  0px;
+}
+
+.haut_page_nav li{
+    display:                        inline-block;
+    color:                          white;
+}
+
+.haut_page_nav li+li:before{
+        content:"|";
+}
+
+.haut_page_nav a{
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 12pt;
+    opacity: 0.7;
+    color: white;
+}
+
+.s_blanc{
+    color:                          white;
+    opacity:                        0.5;
+    font-size:                      10pt;
+}
+
+.icon{
+    padding-right:                  5px;  
+}
+
+
+.bande_entete_categorie{
+    margin-bottom: 0px;
+    margin-top: 0px
+}
+
+
+
+.input_search_produits{
+    width:                          400px;
+    background-image:               url(../images/search_bg.jpg);
+    text-align:                     right;
+    border:                         2px solid;
+    border-radius:                  25px;
+    border-color:                   #919191;
+    text-align:                     left;
+    margin-bottom:                  40px;
+    margin-left:                    40px;
+    padding-left:                   10px;
+    padding-top:                    10px;
+    padding-bottom:                 10px;
+
+}
+
+.button_produits{
+    border-right-style: solid;
+    border-color:  black;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.search_btn{
+padding-top: 5px;
+}
+
+.produits_deconnexion{
+  padding-left: 60px;
+}
+
+
+.produits_test{
+  font-style: normal;
+  font-weight: bold;
+  padding-left: 50px;
+  margin-bottom: 5px;
+  margin-top: -20px;
+  text-align: 40px;
+}
 
 section{
     margin-left: 140px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .titre_produits{
@@ -78,14 +248,13 @@ section{
     border-color: black; 
     border-radius: 20px;
     margin-bottom: 20px;
+    margin-top: 0px;
     background-color: white;
     padding-top: 20px;
     padding-bottom: 0px;
     padding-left: 30px;
     padding-right: 12px;
-
 }
-
 
 .image_livre{
   width: 40%;
@@ -100,7 +269,7 @@ section{
 .produit_livre a{
   text-decoration: none;
 }
-produit/produits/1
+
 .livre_nom{
   font-size: 14pt;
   margin-bottom: -10px;
@@ -140,6 +309,23 @@ produit/produits/1
 
 .logo_ajout_panier{
   padding-left: 180px;
+}
+
+.produits_compte{
+  margin-left: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #525252;
+  color: black;
+}
+
+.produits_fin_stock{
+  width: 80px;
+  text-align: center;
+  color: white;
+  background-color: red;
 }
 
 /* =============================================================== */
@@ -381,12 +567,13 @@ produit/produits/1
 /* =============================================================== */
 
 .contenu_php_section{
+    width: 600px;
     margin-left: 140px;
     margin-top: 20px;
 }
 
 .contenu_php_article {
-    width: 50%;
+
     display: -webkit-flex;
     display: Flex;
     align-items:stretch;
@@ -396,26 +583,32 @@ produit/produits/1
     border-radius: 20px;
     margin-bottom: 20px;
     background-color: white;
-    padding-top: 20px;
-    padding-bottom: 0px;
-    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
 
 }
 
 .contenu_php_titre{
-  margin-bottom: 0px;
+  margin-bottom: -3px;
+  margin-left: 15px;
 }
 
 
 .contenu_php_image_livre{
   width: 40%;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: red;
+  padding-top: 20px;
 }
 
 
 .contenu_php_produit_livre{
   width: 60%;
   text-align: left;
-  margin-top: -20px;
+  margin-top: 0px;
+  padding-left: 10px;
 }
 
 
@@ -436,15 +629,16 @@ produit/produits/1
 
 
 .contenu_php_titre_ean13_quantite{
-  margin-top: -15px;
+  margin-top: -20px;
   margin-bottom: 0px;
+  margin-left: 15px;
 }
 
 .contenu_php_titre_resume{
   margin-bottom: 0px;
 }
 .contenu_php_bloc_resume{
-    width: 50%;
+
     margin-top: 5px;
 }
 
@@ -477,6 +671,13 @@ produit/produits/1
   background:red;
 }
 
+
+.formulaire_login{
+
+  margin-top: 40px;
+}
+
+
 /* =============================================================== */
 /* REGISTER COMPTE 
 /* =============================================================== */
@@ -500,7 +701,6 @@ produit/produits/1
 .register_buttons{
   margin-left: 150px;
 }
-
 
 
 /* =============================================================== */
@@ -530,162 +730,5 @@ produit/produits/1
 
 .margin_left{
   margin-left: 50px;
-}
-
-
-/* ----------------------------------- Headers  ------------------------------ */
-
-/* -------------------------------      entête  --------------------------- */
-
-
-header{
-    border-style: solid;
-    border-width: 2px;
-    border-color: #7e7975;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #BF4C55;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.agora{
-    font-family: "Ma Super Fonte Paragraphe", Arial ;
-    font-style: italic;
-    font-style: bold;
-    font-size: 40pt;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: left;
-}
-
-.agora_partager{
-    font-family: "Ma Super Fonte Paragraphe", Arial ;
-    font-style: normal;
-    font-size: 20pt;
-}
-
-.agora_citation{
-    font-family: "Ma Super Fonte Paragraphe", Arial ;
-    font-style: italic;
-    font-size: 15pt;
-    text-align: right;
-    margin-top: -25px;
-    margin-bottom: 0px;
-    padding-right: 10px;
-}
-
-.agora_proust{
-    font-family: "Ma Super Fonte Paragraphe", Arial ;
-    font-style: normal;
-    font-size: 10pt;
-}
-
-.bande_entete a{
-  text-decoration: none;
-  color:white;
-}
-
-.bande_entete p{
-  font-style: normal;
-  font-weight: bold;
-  padding-left: 6px;
-  margin-top: 0px;
-  padding-top: 10px;
-}
-
-.bande_entete{
-    background-color: blue;
-    height: 40px;
-}
-
-
-
-.haut_page_nav{
-    width:                          55%;   
-    float:                          left;
-    margin-top:                     10px;
-    padding-left:                   20px;
-}
-
-.haut_page_icons{
-    width:                          45%;
-    float:                          left;
-    vertical-align:                 top;
-    margin-top:                     0px;
-}
-
-
-.haut_page_nav ul{
-    padding-left:                   0;
-    text-align:                     left;
-    list-style-type:                none;
-    margin-top:                     0px;
-    margin-bottom:                  0px;
-}
-
-.haut_page_nav li{
-    display:                        inline-block;
-    color:                          white;
-}
-
-.haut_page_nav li+li:before{
-        content:"|";
-}
-
-.haut_page_nav a{
-    font-style: normal;
-    font-weight: bold;
-    text-decoration:                none;
-    font-size:                      12pt;
-    opacity:                        0.7;
-    color:                          white;
-}
-
-.s_blanc{
-    color:                          white;
-    opacity:                        0.5;
-    font-size:                      10pt;
-}
-
-.icon{
-    padding-right:                  5px;  
-}
-
-
-.bande_entete_categorie{
-    padding-top: 10px;
-}
-
-
-/* -------------------------------      produits  --------------------------- */
-
-
-
-.input_search_produits{
-    width:                          400px;
-    background-image:               url(../images/search_bg.jpg);
-    text-align:                     right;
-    border:                         2px solid;
-    border-radius:                  25px;
-    border-color:                   #919191;
-    text-align:                     left;
-    margin-bottom:                  40px;
-    margin-left:                    40px;
-    padding-left:                   10px;
-    padding-top:                    10px;
-    padding-bottom:                 10px;
-
-}
-
-.button_produits{
-    border-right-style: solid;
-    border-color:  black;
-    border-radius: 4px 4px 4px 4px;
-    background-color: red;
-}
-
-.search_btn{
-padding-top: 5px;
 }
 

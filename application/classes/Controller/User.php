@@ -3,8 +3,6 @@
 class Controller_User extends Controller {
 
 
-
-
 	public function action_login()
 	{
 		$users = new Model_user();
@@ -25,7 +23,15 @@ class Controller_User extends Controller {
 	            $_SESSION['user_id'] = $user_id;
 	            $_SESSION['admin'] = 'n';
 	            if ($email == 'cvassigh@wanadoo.fr') $_SESSION['admin'] = 'o';  // pour l'administration
-	    		$this->redirect("panier/achat");
+
+	            if( !isset($_SESSION['panier']) ||  empty($_SESSION['panier']) )
+				{
+	    			$this->redirect("produit/produits");
+	    		}
+	    		else
+	    		{
+	    			$this->redirect("panier/achat");	    			
+	    		}
 	    	}
 	    	else
 	    	{
@@ -44,9 +50,7 @@ class Controller_User extends Controller {
 		$_SESSION = array();
 		session_destroy();
 		// Redirection vers la page d'accueil
-		header("Location: login.php");
-
-
+		$this->redirect("produit/produits");
  	}
 
 
@@ -79,14 +83,17 @@ class Controller_User extends Controller {
 	     	$id = $users->insertUser($nom, $prenom, $email, $pass, $adresse, $pays, $ville, $code, $tel);
 			$user_id = $users->getUser($id);
 
-
-	//		$user = $users->getUser($id);
-
-	
 	     	session_start();
 	        $_SESSION['user_id'] = $user_id;
 
-	    	$this->redirect("panier/achat");
+	        if( !isset($_SESSION['panier']) ||  empty($_SESSION['panier']) )
+			{
+	    		$this->redirect("produit/produits");
+	    	}
+	    	else
+	    	{
+	    		$this->redirect("panier/achat");	    			
+	    	}
 		}
 
 		$view->user=$users;

@@ -30,6 +30,8 @@ class Helper_Mail
 	{
 		$message = Swift_Message::newInstance();
 
+		$message->setContentType('text/html');
+		
 		$from = $this->config->get('from', 'mail');
 		$message->setFrom($from);
 

@@ -53,17 +53,6 @@
                                       ?>
                   </p>
 
-                  <p class="livre_prix">Prix: <?= $contenu['prix']?> €</p>
-  
-                  <p class="contenu_php_admin_boutons">                
-                      <a class="contenu_php_admin_modifier" href="<?= URL::base().'admin/modifier/' . $contenu["id"] ; ?>">
-                        <input type="button" value="Modifier"></a>
-                      <a href="<?= URL::base().'admin/supprimer/' . $contenu["id"] ; ?>">
-                        <button onclick="return confirm('Voulez supprimer le livre :')">Supprimer</button></a>
-                  </p>
-                  <p class="contenu_php_admin_retour">
-                    <a href="<?= URL::base().'produit/produits/' ; ?>"><input type="button" value="Retour"></a>
-                  </p>
 
               </div>
          </article> 
@@ -75,6 +64,20 @@
             <p class="contenu_php_texte_resume"><?= $contenu['resume']?></p>
          </div>
 
+        <p class="livre_prix">Prix: <?= $contenu['prix']?> €</p>
+
+        <?php  if( isset($_SESSION['admin']) && $_SESSION['admin'] == 'o') { ?>
+        <p class="contenu_php_admin_boutons">                
+            <a class="contenu_php_admin_modifier" href="<?= URL::base().'admin/modifier/' . $contenu["id"] ; ?>">
+              <input type="button" value="Modifier"></a>
+            <a href="<?= URL::base().'admin/supprimer/' . $contenu["id"] ; ?>">
+              <button onclick="return confirm('Voulez supprimer le livre :')">Supprimer</button></a>
+        </p>
+        <?php } ?>
+
+          <p class="contenu_php_admin_retour">
+            <a href="<?= URL::base().'produit/produits/' ; ?>"><input type="button" value="Retour"></a>
+          </p>
 
     </section>
 

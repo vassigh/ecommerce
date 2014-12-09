@@ -68,6 +68,8 @@
                    </select>
 
                     <input type="submit" value="Validez"> 
+
+                     <span class="produits_compte"><?php echo '<a href="' . URL::base() .  'user/login/' . '">' . ' Compte' .  '</a>' ?></span>
                  </p>
                 </form>
 
@@ -81,7 +83,10 @@
             <button class="button_produits" type="submit" title="Rechercher" STYLE= "background-color: black">
               <img class="search_btn" src="/ecommerce/assets/pictures/search_btn.jpg" alt="search_btn"></img>
             </button>
+            <span class="produits_deconnexion"><?php echo '<a href="' . URL::base() .  'user/logout/' . '">' . ' Déconnexion' .  '</a>' ?></san>
           </form>
+          <p class="produits_test">ATTENTION CE SITE EST EN VOIE DE CONSTRUCTION!</p>
+
   
           <?php for ($i=0; $i<count($produit); $i++) : ?>
 
@@ -112,11 +117,16 @@
 
                       <p class="livre_date_edition">EAN13: <?= $produit[$i]['ean13']?>.</p>
 
-                      <p class="livre_prix">Prix: <?= $produit[$i]['prix']?> €</p>
+                      <p class="livre_prix">Prix TTC: <?= $produit[$i]['prix']?> €</p>
 
+
+                        <?php  if ($produit[$i]['quantite'] > 0 ) { ?>
                         <a class="logo_ajout_panier" href="<?= URL::base().'panier/ajouter/' . $produit[$i]["id"] ; ?>">
                           <img src="/ecommerce/assets/pictures/ajout_panier.jpeg" alt="img" width='100px'>
                         </a>
+                        <?php } else { ?>
+                        <p class="produits_fin_stock">Fin stock</p>
+                      <?php } ?>
 
                   </div>
 

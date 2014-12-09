@@ -6,6 +6,8 @@ class Model_Panier
     public function __construct()
     {
         $this->db = new Helper_Database();
+
+        $this->mailer = new Helper_Mail();
     }
 
 
@@ -21,6 +23,17 @@ class Model_Panier
     }
 
 
+    public function updateProduit_Quantite($panier)
+    {
+        foreach ($panier as &$value)
+        {
+            $quantite = array_count_values($_SESSION['panier'])[$value['id']];
+            $id=$this->db->execute("update produits SET quantite=quantite-? where id = ?", array($quantite, $value['id'])
+                                  );
+        }
+        return $id;
+    }
+
 
     public function insertCommande($user_id)
     {
@@ -29,10 +42,8 @@ class Model_Panier
     }
 
 
-    public function insert_update_Commande_produits($id_commande, $panier)
+    public function insertCommande_produits($id_commande, $panier)
     {
-        var_dump($id_commande);
-        var_dump($panier);
         foreach ($panier as &$value)
         {
             $quantite = array_count_values($_SESSION['panier'])[$value['id']];
@@ -49,7 +60,6 @@ class Model_Panier
     public function getCommande($id_commande)
     {
         $id=$this->db->query("select * from commandes  where commandes.id = $id_commande ");
-
         return $id;
     }
     
@@ -60,6 +70,11 @@ class Model_Panier
         return $id;
     }
 
+    public function sendMail($to, $subject, $body, $isHTML = true)
+    {
+        $id=$this->mailer->send($to, $subject, $body, $isHTML);
+        return $id;
+    }
 
 }
 

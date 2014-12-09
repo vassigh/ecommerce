@@ -61,7 +61,7 @@
                  </select>
               </p>
               <p><span class="formulaire_admin_ajout_libelle">Quantité :</span>
-                <input type="number" name="number" id="number" required placeholder="Quantité" min="0"/>
+                <input type="number" name="quantite" id="quantite" required placeholder="Quantité" min="0"/>
               </p>
 
               <p>
