@@ -21,7 +21,7 @@
                     <td class="cmd_tr_article">Article(s)</td>
                     <td class="cmd_tr_unitaire">Unitaire</td>
                     <td class="cmd_tr_quantite">Quantité</td>
-                    <td class="cmd_tr_total">Total ttc</td>
+                    <td class="cmd_tr_total">Total <span class="cmd_tr_total_facultatif">(facultatif)</span></td>
                   </tr>
               </table>
 

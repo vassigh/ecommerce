@@ -77,7 +77,6 @@ class Model_Produit
                 }
                 else
                 {
-                    var_dump('D');
                     $nom=$this->db->query("select * from produits 
                     where produits.categorie = ? And ( produits.nom LIKE ? OR produits.auteur LIKE ? )
                     order by produits.id asc limit $number offset $offset", array($categorie, '%' . $search .'%', '%' . $search .'%'));

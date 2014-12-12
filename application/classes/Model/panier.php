@@ -8,6 +8,8 @@ class Model_Panier
         $this->db = new Helper_Database();
 
         $this->mailer = new Helper_Mail();
+
+        $this->paypal = new Helper_Paypal();
     }
 
 
@@ -23,12 +25,19 @@ class Model_Panier
     }
 
 
+    public function getQuantite_Produit($id)
+    {
+        $id=$this->db->queryOne("select quantite from produits where id = ?", array($id));
+        return $id;
+    }
+
+
     public function updateProduit_Quantite($panier)
     {
         foreach ($panier as &$value)
         {
             $quantite = array_count_values($_SESSION['panier'])[$value['id']];
-            $id=$this->db->execute("update produits SET quantite=quantite-? where id = ?", array($quantite, $value['id'])
+            $id=$this->db->execute("update produits SET quantite=if(quantite-?<0,0,quantite-?) where id = ?", array($quantite,$quantite, $value['id'])
                                   );
         }
         return $id;

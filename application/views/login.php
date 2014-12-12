@@ -28,7 +28,7 @@
                 <input type="submit" value="Validez"> 
               </p>
 
-              <p>Sinon creéz un compte:
+              <p>Sinon ouvrez un compte:
                   <a href="<?= URL::site('user/register')?>"><input type="button" value="Compte"></a>
               </p>
             </form>

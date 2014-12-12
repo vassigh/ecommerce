@@ -48,7 +48,7 @@
 
 		<p class="register_buttons">
 			<input class="margin_left" type="submit" value="Validez">
-			<a href="login.php" target="_blank"> <input type="button" value="Annuler"></a>
+			<a href="login" target="_blank"> <input type="button" value="Annuler"></a>
 		</p>
 
 		</form>

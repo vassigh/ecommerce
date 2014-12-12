@@ -9,11 +9,11 @@
     
   </head>
   
-  <body>
+  <body>  
 
            <h3 class="titre_commande">En vous remerciant de votre visite sur non site<br>
             Voici le récapilutaif de votre transaction</h3>
-           <h4 class="titre_commande">Page à imprimer</h4>
+           <h4 class="titre_commande" onclick="window.print()"><a href="">imprimer</a></h4>
 
             <?php echo ('<p class="adresse_achat">' . ucfirst($user['nom']) . ' ' . ucfirst($user['prenom']) . '<br>' .
                          $user['adresse'] . '<br>' .

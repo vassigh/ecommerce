@@ -7,13 +7,17 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
     
-  </head>
+  </head>  
   
   <body class="body_produits">
 
     <header>
-        <p class="agora">L'AGORA<span class="agora_partager"> de mes livres à partager</span></p>
-        <p class="agora_citation">la lecture... une amitié  <span class="agora_proust">(Marcel Proust)</span></p>
+        <p class="agora">L'AGORA<span class="agora_partager"> de mes livres à partager&nbsp;</span>
+        <span class="agora_persan">آگورای</span><span class="agora_persan_partager">کتاب های من برای تقسیم</span>
+        </p>
+        <p class="agora_citation">Une lecture et... une amitié  <span class="agora_proust">(Marcel Proust)</span>
+          <span class="agora_citation_persan">یک خوانش ... یک دوستی </span><span class="agora_proust_persan">مارسل پروست</span>
+        </p>
     </header>
 
       <div class="bande_entete clearfix">
@@ -24,7 +28,7 @@
                       <?php
                         if (  isset($_SESSION['admin']) && $_SESSION['admin'] == 'o')
                         {
-                          echo '<li><p><a href="' . URL::site('admin/ajout') . '">' .  "Administration</a></p></li>";
+                          echo '<li><a href="' . URL::site('admin/ajout') . '">' .  "Administration</a></li>";
                         }
                       ?>
                       
@@ -117,7 +121,7 @@
 
                       <p class="livre_date_edition">EAN13: <?= $produit[$i]['ean13']?>.</p>
 
-                      <p class="livre_prix">Prix TTC: <?= $produit[$i]['prix']?> €</p>
+                      <p class="livre_prix">Prix (facultatif) <?= $produit[$i]['prix']?> €</p>
 
 
                         <?php  if ($produit[$i]['quantite'] > 0 ) { ?>
